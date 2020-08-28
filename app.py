@@ -89,7 +89,7 @@ def tobs():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    # Query all countries in billing history
+    # query 
     results = session.query(station.name,measurement.date, measurement.tobs).filter(station.name == 'WAIKIKI 717.2, HI US').filter(measurement.date > '2016-08-22').all()
 
     session.close()
@@ -105,7 +105,8 @@ def tobs():
 def calc_temps(start, end):
     # Create our session (link) from Python to the DB
     session = Session(engine)
-
+    
+    #Query 
     results = session.query(func.min(measurement.tobs), func.avg(measurement.tobs), func.max(measurement.tobs)).\
         filter(measurement.date >= start).filter(measurement.date <= end).all()
     
