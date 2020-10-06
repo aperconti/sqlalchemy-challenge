@@ -2,7 +2,7 @@ In this project I used SQLAlchemy create_engine to connect to my sqlite database
 
 Used SQLAlchemy automap_base() to reflect my tables into classes and save a reference to those classes called Station and Measurement.
 
-##Precipitation Analysis
+## Precipitation Analysis
 
 
 Designed a query to retrieve the last 12 months of precipitation data.
@@ -23,7 +23,7 @@ Used Pandas to print the summary statistics for the precipitation data.
 
 
 
-##Station Analysis
+## Station Analysis
 
 
 Designed a query to calculate the total number of stations.
